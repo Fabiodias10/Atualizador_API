@@ -10,12 +10,17 @@ import (
 )
 
 var listaNomesAceitos = map[string]struct{}{
-	"ApiAccess":       {},
-	"ApiMobile":       {},
-	"ApiDataParking":  {},
-	"ApiPartner":      {},
-	"ApiPayment":      {},
-	"ApiRegistration": {},
+	"ApiAccess":        {},
+	"ApiMobile":        {},
+	"ApiDataParking":   {},
+	"ApiPartner":       {},
+	"ApiPayment":       {},
+	"ApiRegistration":  {},
+	"ApiMonitoring":    {},
+	"GerenciadorLocal": {},
+	"ApiLPR_Hikvision": {},
+	"ApiLPR_Intelbras": {},
+	"ApiLPR_Quercus":   {},
 	// Adicione mais nomes conforme necessário
 }
 

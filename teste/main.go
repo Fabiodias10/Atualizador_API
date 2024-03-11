@@ -2,23 +2,23 @@ package main
 
 import (
 	"fmt"
-	"os/exec"
+	"teste/download"
+	"teste/listar"
+	"teste/survey"
 )
 
 func main() {
-	// Comando para parar o serviço do IIS
-	// cmd := exec.Command("net", "stop", "w3svc")
-	cmd := exec.Command("iisreset", "/stop")
+	fmt.Println("AWS S3")
 
-	// Executa o comando
-	err := cmd.Run()
-
-	// Verifica se ocorreu algum erro durante a execução do comando
+	_, resposta, err := listar.Listar()
 	if err != nil {
-		fmt.Println("Erro ao parar o IIS:", err)
-		return
+		fmt.Println("Erro ao listar arquivos:", err)
 	}
+	resp := survey.Surveymultiselect(resposta)
+	// fmt.Println(key)
+	download.Download(resp)
 
-	fmt.Println("IIS parado com sucesso.")
-
+	// Aguardar a tecla ser pressionada antes de sair
+	fmt.Println("Pressione Enter para sair...")
+	fmt.Scanln()
 }

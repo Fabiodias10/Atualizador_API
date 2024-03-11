@@ -89,11 +89,6 @@ func Efetiva_download(selectedFiles []string, url string) {
 		}
 	}
 
-	fmt.Println("Downloads concluídos.")
-	fmt.Printf("Descompactando...")
-	Descompactando()
-	fmt.Println(" OK")
-
 }
 
 func DescompactarZip(arquivoZip, destino string) error {

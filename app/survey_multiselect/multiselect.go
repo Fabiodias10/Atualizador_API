@@ -7,11 +7,12 @@ import (
 )
 
 func Surveymultiselect(nomesArquivos []string) []string {
-
+	fmt.Println("")
 	// Criar prompt de múltipla seleção usando survey
 	var selectedFiles []string
+	// var selectedFilesAws []string
 	prompt := &survey.MultiSelect{
-		Message:  "Escolha os arquivos desejados:",
+		Message:  "Escolha as api's:",
 		Options:  nomesArquivos,
 		PageSize: len(nomesArquivos),
 	}
@@ -21,5 +22,6 @@ func Surveymultiselect(nomesArquivos []string) []string {
 		fmt.Println("Erro ao obter a seleção:", err)
 		// return
 	}
+
 	return selectedFiles
 }

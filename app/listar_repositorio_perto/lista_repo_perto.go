@@ -9,7 +9,7 @@ import (
 )
 
 func Listarrepositorioperto(url string) []string {
-	fmt.Println("")
+	// fmt.Println("")
 	// URL da página que contém os links para os arquivos
 
 	// Obter a lista de nomes de arquivo da página
